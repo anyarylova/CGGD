@@ -51,11 +51,10 @@ void cg::renderer::rasterization_renderer::render()
 		rasterizer->draw(model->get_index_buffers()[shape_id]->get_number_of_elements(), 0);
 	}
 
-	cg::utils::save_resource(*render_target, settings->result_path);
 	auto stop = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<float, std::milli> duration = stop - start;
 	std::cout << "Rasterization took " << duration.count() << "ms\n";
-
+	cg::utils::save_resource(*render_target, settings->result_path);
 }
 
 void cg::renderer::rasterization_renderer::destroy() {}
