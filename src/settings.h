@@ -29,4 +29,4 @@ namespace cg
 		unsigned accumulation_num;
 	};
 
-}// namespace cg
+}
